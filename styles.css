@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-violet: hsl(256, 26%, 20%);
+  --grayish-blue: hsl(216, 30%, 68%);
+  --very-dark-violet: hsl(270, 9%, 51%);
+  --very-dark-gray: hsl(0, 0%, 98%);
+  --padding-container: 80px 0;
+  --primary-font: 'Lato'
+}
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+.hero {
+  background-color: var(--dark-violet);
+  color: #fff;
+  --padding-container: 0;
+}
+
+.nav {
+  background-color: #fff;
+}
+
+.nav__container {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__links {
+  display: none;
+}
+
+
+.nav__icon, .nav__logo {
+  display: block; 
+}
+
+.hero__main {
+  width: 100%;
+}
+
+.hero__main::before {
+  content: "";
+  display: block;
+  height: 400px;
+  width: 100%;
+  background-image: url('./assets/mushroom_m.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__texts {
+  width: 90%;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: var(--primary-font);
+  letter-spacing: 3px;
+}
+
+.hero__paragraph {
+  line-height: 1.5;
+  margin-top: 1em;
+}
+
+.cta {
+  display: inline-block;
+  border: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  padding: .8em 3em;
+  margin-top: 1.5em;
+}
+
+.plans {
+  text-align: center;
+}
+
+.title--plans {
+  position: relative;
+  padding-top: 30px;
+}
+
+.title--plans::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: 0;
+  left: 0;
+  width: 150px;
+  height: 2px;
+  background-color: var(--grayish-blue);
+  margin: 0 auto;
+}
+
+.plans__items {
+  margin-top: 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.plans__icon {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.plans__title {
+  font-family: var(--primary-font);
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+.plans__paragraph {
+  margin-top: 1rem;
+  line-height: 1.5;
+  color: var(--grayish-blue);
+}
+
+.find {
+  padding: 80px 0;
+  --padding-container: 60px 30px;
+}
+
+.find__container {
+  background-color: var(--dark-violet);
+  color: #fff;
+  text-align: center;
+}
+
+.footer {
+  background-color: var(--very-dark-gray);
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding-bottom: 2.5em;
+  margin-bottom: 2.5em;
+  border-bottom: 1px solid var(--dark-violet);
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__media {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.footer__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--dark-violet);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer__link--first {
+  margin-bottom: 1em;
+  color: var(--grayish-blue);
+}
+
+@media (min-width: 768px) {
+  
+  .nav__links {
+    display: flex;
+    gap: 2em;
+  }
+
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: var(--grayish-blue);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: .8em 0;
+  }
+
+  .nav__link--cta {
+    color: var(--dark-violet);
+    border: 1px solid;
+    padding: .8em 1em;
+  }
+
+  .hero {
+    background-image: linear-gradient(to bottom, var(--dark-violet) 75%, #fff 75%);
+  }
+  
+  .hero__main {
+    --padding-container: 100px 20px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .hero__main::before {
+    height: 530px;
+    width: 48%;
+    background-image: url('./assets/mushroom.png');
+    background-repeat: no-repeat;
+    order: 1;
+    
+  }
+  
+  .hero__texts {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0 0;
+    text-align: left;
+    color: #fff;
+    position: relative;
+  }
+
+  .hero__texts::before {
+    content: "";
+    width: 120px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    position: absolute;
+  }
+  
+  .title {
+    font-size: 2.7rem;
+  }
+
+  .plans {
+    text-align: left;
+  }
+  
+  .title--plans {
+    position: relative;
+    padding-top: 30px;
+  }
+  
+  .title--plans::before {
+    margin: 0;
+  }
+  
+  .plans__items {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+  
+  .plans__item {
+    flex: 1;
+  }
+
+
+  .plans__icon {
+    margin-left: 0;
+  }
+  
+  .plans__title {
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+  
+  .plans__paragraph {
+    margin-top: 1rem;
+    line-height: 1.5;
+    color: var(--grayish-blue);
+  }
+
+  .find {
+    padding: 60px;
+    --padding-container: 60px 30px;
+  }
+  
+  .find__container {
+    background-color: var(--dark-violet);
+    color: #fff;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .title--find {
+    width: 60%;
+  }
+  
+  .footer {
+    background-color: var(--very-dark-gray);
+  }
+  
+  .footer__brand {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    
+  }
+  
+  .footer__navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3em;
+  }
+  
+  .footer__nav {
+    width: 20%;
+    align-items: flex-start;
+  }
+  
+  .footer__link {
+    text-decoration: none;
+    color: var(--dark-violet);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  .footer__link--first {
+    margin-bottom: 1em;
+    color: var(--grayish-blue);
+  }
+}
